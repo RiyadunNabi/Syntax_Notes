@@ -82,6 +82,12 @@ for (int i = 0; i < edges.size(); ++i) {
     int w = get<2>(edges[i]);
     cout << u << " -- " << v << " : " << w << endl;
 }
+//or
+for (auto &it : edges) {
+    int w, u, v;
+    std::tie(w, u, v) = it;
+    cout << u << " - " << v << " (Weight: " << w << ")\n";
+}
 ```
 
 ### 🔁 C++17 Range-based Loop

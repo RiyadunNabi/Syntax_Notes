@@ -59,6 +59,9 @@ Use `get<index>` to access values inside a tuple:
 int u = get<0>(edges[i]);
 int v = get<1>(edges[i]);
 int w = get<2>(edges[i]);
+//or
+int w, u, v;
+std::tie(w, u, v) = t;
 ```
 
 ### ✨ C++17 Feature: Structured Bindings

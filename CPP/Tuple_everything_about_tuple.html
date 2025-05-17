@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Tuple Usage in MST</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #007acc;
+    }
+    pre {
+      background-color: #f0f0f0;
+      border-left: 4px solid #007acc;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: "Consolas", monospace;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .check {
+      color: green;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <span class="check">✅</span><strong>Declaration:</strong>
+    <pre><code>#include &lt;vector&gt;
+#include &lt;tuple&gt;
+using namespace std;
+
+vector&lt;tuple&lt;int, int, int&gt;&gt; MST;</code></pre>
+  </section>
+
+  <section>
+    <span class="check">✅</span><strong>Insertion:</strong>
+    <p>You can insert using <code>make_tuple</code> or brace initialization:</p>
+    <pre><code>MST.push_back(make_tuple(u, v, weight));  // preferred
+MST.push_back({u, v, weight});            // also works (C++11+)</code></pre>
+  </section>
+
+  <section>
+    <span class="check">✅</span><strong>Accessing elements:</strong>
+    <p>Use <code>get&lt;index&gt;</code> to access tuple elements:</p>
+    <pre><code>int u = get&lt;0&gt;(MST[i]);
+int v = get&lt;1&gt;(MST[i]);
+int w = get&lt;2&gt;(MST[i]);</code></pre>
+
+    <p>Or use structured bindings (C++17+):</p>
+    <pre><code>auto [u, v, w] = MST[i];</code></pre>
+  </section>
+
+</body>
+</html>

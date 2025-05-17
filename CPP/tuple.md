@@ -18,7 +18,7 @@ using namespace std;
 vector<tuple<int, int, int>> edges;
 ```
 
-### 💡 Pro Tip: Type Alias
+##### 💡 Pro Tip: Type Alias
 
 Improve readability by using a type alias:
 
@@ -41,7 +41,7 @@ edges.push_back(make_tuple(u, v, weight));
 edges.push_back({u, v, weight});
 ```
 
-### ⚡ Modern C++17 Approach
+##### ⚡ Modern C++17 Approach
 
 With C++17, prefer `emplace_back` for slightly better performance:
 
@@ -64,7 +64,7 @@ int w, u, v;
 std::tie(w, u, v) = t;
 ```
 
-### ✨ C++17 Feature: Structured Bindings
+##### ✨ C++17 Feature: Structured Bindings
 
 Cleaner and more intuitive:
 
@@ -76,7 +76,7 @@ auto [u, v, w] = edges[i];
 
 ## ✅ Iterating Through the Tuples
 
-### 🔁 Traditional Loop
+##### 🔁 Traditional Loop
 
 ```cpp
 for (int i = 0; i < edges.size(); ++i) {
@@ -93,7 +93,7 @@ for (auto &it : edges) {
 }
 ```
 
-### 🔁 C++17 Range-based Loop
+##### 🔁 C++17 Range-based Loop
 
 ```cpp
 for (const auto& [u, v, w] : edges) {

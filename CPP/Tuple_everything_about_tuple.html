@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -61,5 +62,251 @@ int w = get&lt;2&gt;(MST[i]);</code></pre>
     <pre><code>auto [u, v, w] = MST[i];</code></pre>
   </section>
 
+</body>
+</html>
+ -->
+
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Tuple Usage in MST</title>
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #4cc9f0;
+      --code-bg: #2b2d42;
+      --card-bg: #ffffff;
+      --gradient: linear-gradient(120deg, #4361ee, #3a0ca3);
+    }
+    
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+      background-color: #f1f5f9;
+      color: var(--dark);
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    h1 {
+      text-align: center;
+      color: var(--dark);
+      margin-bottom: 2rem;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-bottom: 0.5rem;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 0.75rem;
+    }
+    
+    .check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background-color: var(--success);
+      color: white;
+      font-weight: bold;
+      border-radius: 50%;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
+    }
+    
+    pre {
+      background-color: var(--code-bg);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: "Consolas", "Fira Code", "JetBrains Mono", monospace;
+      color: white;
+      font-size: 0.95rem;
+    }
+    
+    code {
+      font-family: "Consolas", "Fira Code", "JetBrains Mono", monospace;
+      background-color: rgba(67, 97, 238, 0.1);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+    
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      color: #e0e0e0;
+    }
+    
+    .comment {
+      color: #7986cb;
+      font-style: italic;
+    }
+    
+    .keyword {
+      color: #ff79c6;
+    }
+    
+    .type {
+      color: #8be9fd;
+    }
+    
+    .string {
+      color: #f1fa8c;
+    }
+    
+    .function {
+      color: #50fa7b;
+    }
+    
+    .operator {
+      color: #ff79c6;
+    }
+    
+    .note {
+      background-color: rgba(76, 201, 240, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .note-title {
+      font-weight: 600;
+      color: var(--success);
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>C++ Tuple Usage in Minimum Spanning Tree</h1>
+  
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="check">✓</div>
+        <h2 class="card-title">Declaration</h2>
+      </div>
+      <pre><code><span class="keyword">#include</span> <span class="operator">&lt;</span><span class="type">vector</span><span class="operator">&gt;</span>
+<span class="keyword">#include</span> <span class="operator">&lt;</span><span class="type">tuple</span><span class="operator">&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Format: {source, destination, weight}</span>
+<span class="type">vector</span><span class="operator">&lt;</span><span class="type">tuple</span><span class="operator">&lt;</span><span class="type">int</span>, <span class="type">int</span>, <span class="type">int</span><span class="operator">&gt;&gt;</span> MST;</code></pre>
+      
+      <div class="note">
+        <div class="note-title">Pro Tip</div>
+        <p>Use descriptive type aliases to improve readability:</p>
+        <pre><code><span class="keyword">using</span> <span class="type">Edge</span> = <span class="type">tuple</span><span class="operator">&lt;</span><span class="type">int</span>, <span class="type">int</span>, <span class="type">int</span><span class="operator">&gt;</span>;
+<span class="type">vector</span><span class="operator">&lt;</span><span class="type">Edge</span><span class="operator">&gt;</span> MST;</code></pre>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="check">✓</div>
+        <h2 class="card-title">Insertion</h2>
+      </div>
+      <p>You can insert using <code>make_tuple</code> or brace initialization:</p>
+      <pre><code><span class="comment">// Method 1: Using make_tuple (works in all C++ versions)</span>
+MST.<span class="function">push_back</span>(<span class="function">make_tuple</span>(u, v, weight));
+
+<span class="comment">// Method 2: Using brace initialization (C++11 and newer)</span>
+MST.<span class="function">push_back</span>({u, v, weight});</code></pre>
+      
+      <div class="note">
+        <div class="note-title">Modern Approach</div>
+        <p>With C++17, you can use <code>emplace_back</code> for better performance:</p>
+        <pre><code>MST.<span class="function">emplace_back</span>(u, v, weight);</code></pre>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="check">✓</div>
+        <h2 class="card-title">Accessing Elements</h2>
+      </div>
+      <p>Use <code>get&lt;index&gt;</code> to access tuple elements:</p>
+      <pre><code><span class="comment">// Traditional access method</span>
+<span class="type">int</span> u = <span class="function">get</span><span class="operator">&lt;</span>0<span class="operator">&gt;</span>(MST[i]);
+<span class="type">int</span> v = <span class="function">get</span><span class="operator">&lt;</span>1<span class="operator">&gt;</span>(MST[i]);
+<span class="type">int</span> w = <span class="function">get</span><span class="operator">&lt;</span>2<span class="operator">&gt;</span>(MST[i]);</code></pre>
+      
+      <div class="note">
+        <div class="note-title">C++17 Feature</div>
+        <p>Use structured bindings for cleaner code:</p>
+        <pre><code><span class="comment">// Modern approach with structured bindings</span>
+<span class="keyword">auto</span> [u, v, w] = MST[i];</code></pre>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <div class="check">✓</div>
+        <h2 class="card-title">Iterating Through MST</h2>
+      </div>
+      <p>Iterate through all edges in the MST:</p>
+      <pre><code><span class="comment">// Using traditional for loop</span>
+<span class="keyword">for</span> (<span class="type">int</span> i = 0; i < MST.<span class="function">size</span>(); ++i) {
+    <span class="type">int</span> u = <span class="function">get</span><span class="operator">&lt;</span>0<span class="operator">&gt;</span>(MST[i]);
+    <span class="type">int</span> v = <span class="function">get</span><span class="operator">&lt;</span>1<span class="operator">&gt;</span>(MST[i]);
+    <span class="type">int</span> w = <span class="function">get</span><span class="operator">&lt;</span>2<span class="operator">&gt;</span>(MST[i]);
+    cout << u << " -- " << v << " : " << w << endl;
+}
+
+<span class="comment">// Using range-based for loop with structured bindings (C++17)</span>
+<span class="keyword">for</span> (<span class="keyword">const auto</span>& [u, v, w] : MST) {
+    cout << u << " -- " << v << " : " << w << endl;
+}</code></pre>
+    </div>
+  </div>
 </body>
 </html>

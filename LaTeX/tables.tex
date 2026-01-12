@@ -1,0 +1,223 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl,xcolor}
+\usepackage{longtable}
+
+\title{random}
+\author{Riyadun Nabi Riyad}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\begin{tabular}{|l|c|r|}
+\hline
+Left & Center & Right \\
+\hline
+A & B & C \\
+\hline
+\end{tabular}
+\\\\
+\\\\
+2nd.\\
+% \usepackage{booktabs}
+\begin{tabular}{lcc}
+\toprule
+Header 1 & Header 2 & Header 3 \\
+\midrule
+Data & Data & Data \\
+\bottomrule
+\end{tabular}
+\\\\
+\\\\
+
+3rd.\\
+\begin{tabular}{|l|p{3cm}|}
+\hline
+Name & Description \\
+\hline
+CPU & This is a long description that wraps automatically \\
+\hline
+\end{tabular}
+\\\\
+\\\\
+
+
+4th.\\
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Merged Cells} \\
+\hline
+A & B \\
+\hline
+\end{tabular}
+\\\\
+\\\\
+
+5.0\\
+\begin{tabular}{|c|c|}
+\hline
+A & 10 \\
+\hline
+ & 20 \\
+\hline
+\end{tabular}
+\\\\
+\\\\
+
+
+5th.\\
+% \usepackage{multirow}
+\begin{tabular}{|c|c|}
+\hline
+\multirow{2}{*}{A} & 10 \\
+\cline{2-2}
+& 20 \\
+\hline
+\end{tabular}
+\\\\
+\\\\
+
+
+6th\\
+% \usepackage{colortbl,xcolor}
+
+\begin{tabular}{|c|c|}
+\hline
+\rowcolor{gray}
+Header 1 & Header 2 \\
+\hline
+\cellcolor{blue!30} Blue & Normal \\
+\hline
+\end{tabular}
+\\\\
+\\\\
+
+7th\\
+\begin{table}[h]
+\centering
+\caption{Sample Table}   %seeeee
+\label{tab:my_table1}
+\begin{tabular}{|l|c|r|}
+\hline
+Header 1 & Header 2 & Header 3 \\
+\hline
+Data 1 & Data 2 & Data 3 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+Header 1 & Header 2 & Header 3 \\
+\hline
+Data 1 & Data 2 & Data 3 \\
+\hline
+\end{tabular}
+\caption{Sample Table}   %seeeeee
+\label{tab:my_table2}
+\end{table}
+
+See Table~\ref{tab:my_table1} dbshbcd \\
+See Table~\ref{tab:my_table2} bdhsbvdhs \\
+
+\\\\
+\\\\
+
+
+
+8th//
+% \usepackage{longtable}
+\begin{longtable}{|l|c|}
+\caption{Long Table} \\
+\hline
+Name & Value \\
+\hline
+\endfirsthead
+
+\hline
+Name & Value \\
+\hline
+\endhead
+
+Item 1 & 10 \\
+Item 2 & 20 \\
+% ...
+\hline
+\end{longtable}
+\\\\
+\\\\
+
+
+9th \\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Module} & \multicolumn{2}{c|}{\textbf{Score}}  \\  
+    \cline{2-3}  
+        & \textbf{Theory} & \textbf{Lab} \\ 
+    \hline
+    Module A & 75 & 80 \\ 
+    \hline
+    Module B & 88 & 90 \\ 
+    \cline{2-3}
+             & 85 & 87 \\ 
+    \hline
+    Module C & 70 & 72 \\ 
+    \hline
+    \end{tabular}
+\caption{Module-wise Performance Summary}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Module & \multicolumn{2}{c|}{Score}  \\  
+    \cline{2-3}  
+        & Theory & Lab \\ 
+    \hline
+    Module A & 75 & 80 \\ 
+    \hline
+    Module B & 88 & 90 \\ 
+    \cline{2-3}
+             & 85 & 87 \\ 
+    \hline
+    Module C & 70 & 72 \\ 
+    \hline
+    \end{tabular}
+    
+\caption{Module-wise Performance Summary}
+\end{table}
+
+\\
+Generated using web
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{|l|ll|}
+\hline
+\multirow{2}{*}{Module} & \multicolumn{2}{c|}{Score}        \\ \cline{2-3} 
+                        & \multicolumn{1}{l|}{Theory} & Lab \\ \hline
+A                       & \multicolumn{1}{l|}{75}     & 80  \\ \hline
+\multirow{2}{*}{B}      & \multicolumn{1}{l|}{88}     & 90  \\ \cline{2-3} 
+                        & \multicolumn{1}{l|}{85}     & 87  \\ \hline
+C                       & \multicolumn{1}{l|}{70}     & 72  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\end{document}

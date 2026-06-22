@@ -192,3 +192,42 @@ See the separate `wayland-clipboard-manager-spec.md` document for the full proje
 ---
 
 *Setup tested on Pop!_OS, COSMIC desktop, Wayland session. Core paste functionality works; UI polish issues remain open due to COSMIC compositor limitations.*
+
+
+
+---
+---
+---
+## Clipboard History Size Management
+
+Default behavior stores indefinitely. To cap history:
+
+**Edit the autostart file:**
+```bash
+nano ~/.config/autostart/cliphist-watcher.desktop
+```
+
+Change `Exec` line to:
+```ini
+Exec=wl-paste --watch cliphist store --max-items 200
+```
+
+Restart the watcher:
+```bash
+pkill -f "wl-paste --watch"
+wl-paste --watch cliphist store --max-items 200 &
+```
+
+**To wipe existing history:**
+```bash
+cliphist wipe
+```
+
+> **Note:** Item IDs don't reset after a wipe — that's just cliphist's internal counter behavior, cosmetic only.
+
+**Check DB size anytime:**
+```bash
+du -sh ~/.cache/cliphist/
+```
+
+DB location: `~/.cache/cliphist/db` (SQLite file). At 200 text items it stays well under 5MB.

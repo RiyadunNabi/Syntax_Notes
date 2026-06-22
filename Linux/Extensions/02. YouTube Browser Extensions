@@ -1,0 +1,128 @@
+# YouTube Browser Extensions
+
+Extensions to enhance, control, and declutter your YouTube experience.
+
+---
+
+## 1. Video Speed Controller `v0.10.2`
+
+**Purpose:** Speed up, slow down, advance, and rewind HTML5 audio/video with keyboard shortcuts.
+
+| | |
+|---|---|
+| **Chrome/Brave** | [Video Speed Controller on Chrome Web Store](https://chromewebstore.google.com/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk) |
+| **Firefox** | [Video Speed Controller on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/videospeed/) |
+
+**Key Features:**
+- Works on any HTML5 video — YouTube, Netflix, Udemy, etc.
+- Keyboard shortcuts to increase/decrease speed on the fly
+- Fine-grained speed control (e.g. 1.1x, 1.75x, 2.5x)
+- Rewind and advance by seconds with hotkeys
+
+---
+
+## 2. Zoom to Fill — Ultrawide Video `v2.2.1`
+
+**Purpose:** Remove black bars on Netflix, Amazon Prime, Disney Plus, HBO Max, and YouTube by changing to ultrawide video aspect ratio.
+
+| | |
+|---|---|
+| **Chrome/Brave** | [Zoom to Fill on Chrome Web Store](https://chromewebstore.google.com/detail/zoom-to-fill-ultrawide-vi/adpjjimagbjfglkodpofgfphpbdlfeiho) |
+| **Firefox** | Not officially listed; use on a Chromium-based browser |
+
+**Key Features:**
+- Removes black bars from ultrawide monitor users
+- Works on YouTube, Netflix, Amazon Prime, Disney+, HBO Max
+- Adjusts video aspect ratio to fill the screen
+- One-click toggle
+
+---
+
+## 3. AutoPause `v2.9.1`
+
+**Purpose:** Pause other audio and video sources automatically if audio is playing on the active tab, with automatic resume.
+
+| | |
+|---|---|
+| **Chrome/Brave** | [AutoPause on Chrome Web Store](https://chromewebstore.google.com/detail/autopause/bcecidolamfbkgokgpnlpmhjcgjlhli) |
+| **Firefox** | [AutoPause on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/autopause) |
+
+**Key Features:**
+- Auto-pauses background tabs when a new video/audio starts
+- Resumes paused tabs when current tab stops playing
+- Prevents multiple tabs from playing audio simultaneously
+- Great for multitasking across YouTube, Spotify, etc.
+
+---
+
+## 4. 'Improve YouTube!' `v4.2028`
+
+**Purpose:** Supercharge YouTube with features, filters, and a fully customizable look.
+
+| | |
+|---|---|
+| **Chrome/Brave** | [Improve YouTube! on Chrome Web Store](https://chromewebstore.google.com/detail/improve-youtube-open-yout/bnomihfeiccainjcjbihegjjajndnbbh) |
+| **Firefox** | [Improve YouTube! on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/improve-youtube/) |
+
+**Key Features:**
+- Filter videos by type, length, or channel
+- Customize YouTube's appearance and layout
+- Remove unwanted sections (ads, shorts, recommendations)
+- Fine-grained control over what you see on the homepage and sidebar
+
+---
+
+## 5. Unhook — Remove YouTube Recommendations `v1.6.9`
+
+**Purpose:** Hide YouTube distractions — related videos, shorts, comments, suggestions wall, homepage feed, trending, and more.
+
+| | |
+|---|---|
+| **Chrome/Brave** | [Unhook on Chrome Web Store](https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfbepaaaebnommgaepoid) |
+| **Firefox** | [Unhook on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/unhook-youtube/) |
+
+**Key Features:**
+- Hide homepage feed, recommended sidebar, end cards
+- Remove Shorts, trending, comments, and autoplay
+- Toggle each element independently
+- Great for focused study/work sessions without rabbit holes
+
+---
+
+## 6. YouTube DJ effects / EQ / Volume Booster `v121`
+
+**Purpose:** Bring DJ-style audio tools to YouTube — Equalizer, Volume Booster, Sound Effects, and more.
+
+| | |
+|---|---|
+| **Chrome/Brave** | [YouTube DJ Effects on Chrome Web Store](https://chromewebstore.google.com/detail/youtube-dj-effects-eq-vol/defekohaofmambfifpfoojkmfdpcbgko) |
+| **Firefox** | Not officially listed; use on a Chromium-based browser |
+
+**Key Features:**
+- Built-in equalizer with presets
+- Volume booster beyond the default 100%
+- Sound effects and audio filters
+- Works on YouTube and other websites
+
+---
+
+## Comparison Table
+
+| Extension | Version | Primary Use | Works On |
+|---|---|---|---|
+| Video Speed Controller | v0.10.2 | Playback speed control | All HTML5 video |
+| Zoom to Fill | v2.2.1 | Remove black bars (ultrawide) | YouTube, Netflix, Prime & more |
+| AutoPause | v2.9.1 | Auto-pause background tabs | All audio/video |
+| Improve YouTube! | v4.2028 | Full YouTube enhancement | YouTube |
+| Unhook | v1.6.9 | Remove distractions | YouTube |
+| YouTube DJ Effects | v121 | Audio EQ & volume boost | YouTube + others |
+
+---
+
+## Recommended Combo
+
+> Use **Unhook** to remove distractions + **Video Speed Controller** for faster watching + **Improve YouTube!** for full customization + **AutoPause** to avoid overlapping audio. Add **YouTube DJ Effects** for audio enhancement.
+
+---
+
+*Last updated: June 2026*

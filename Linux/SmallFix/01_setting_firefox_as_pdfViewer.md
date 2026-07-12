@@ -4,8 +4,9 @@ xdg-mime default firefox.desktop application/pdf
 
 ## Verification
 To verify that the change worked, run:
-
+```bash
 xdg-mime query default application/pdf
+```
 
 It should output firefox.desktop.
 ## Note for Flatpak Users

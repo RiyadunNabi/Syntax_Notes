@@ -1,6 +1,8 @@
 To instantly set Firefox as your system-wide default PDF viewer using the terminal, open your terminal (Super + T) and run this command:
 
+```bash
 xdg-mime default firefox.desktop application/pdf
+```
 
 ## Verification
 To verify that the change worked, run:

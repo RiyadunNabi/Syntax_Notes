@@ -12,12 +12,7 @@ It should output firefox.desktop.
 ## Note for Flatpak Users
 If you installed Firefox via Flathub (Flatpak) instead of the default Pop!_OS package, use this command instead:
 
+```bash
 xdg-mime default org.mozilla.firefox.desktop application/pdf
-
-If you are interested, let me know:
-
-* Did the command throw an error?
-* Does clicking a PDF now successfully trigger Firefox?
-
-I can help you troubleshoot if your desktop environment ignores the rule!
+```
 
